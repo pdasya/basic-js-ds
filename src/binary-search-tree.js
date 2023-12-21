@@ -70,11 +70,9 @@ class BinarySearchTree {
         return node; 
       }
 
-      if (data < node.data) {
-        return findInTree(node.left, data); 
-      } else {
-        return findInTree(node.right, data);
-      }
+      return data < node.data ? 
+      findInTree(node.left, data) :
+      findInTree(node.right, data);
     }
   }
 
